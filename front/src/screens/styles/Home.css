@@ -1,0 +1,31 @@
+.entete {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--main-back);
+}
+
+.title {
+	color: var(--main);
+	font-family: 'enedis';
+	margin-bottom: 12px;
+}
+.description {
+	/*background-color: #f6f6fe;*/
+	font-family: 'Public';
+}
+
+.defi {
+	display: flex;
+	flex-direction: column;
+}
+
+.launchGame {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	background-color: var(--main);
+	border-radius: 10px 10px 10px 10px;
+	color: white;
+}
