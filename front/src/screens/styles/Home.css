@@ -2,8 +2,19 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 2em;
+	/* font-size: 2em; */
 	color: var(--main);
+}
+
+.astuces img {
+	width: 25%;
+}
+
+.basdepage {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .defi {
@@ -25,6 +36,16 @@
 	background-color: var(--main-back);
 }
 
+.fil {
+	position: absolute;
+	top: -20vh;
+	width: 100%;
+}
+
+.fil img {
+	width: 100%;
+}
+
 .launchGame {
 	display: flex;
 	justify-content: center;
@@ -36,6 +57,11 @@
 	border-radius: 10px 10px 10px 10px;
 	color: white;
 	text-decoration: none;
+}
+
+.logo img {
+	display: flex;
+	width: 40%;
 }
 
 .title {

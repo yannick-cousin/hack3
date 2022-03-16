@@ -1,9 +1,12 @@
 import Login from '../components/Login';
 import Profils from '../components/Profils';
 import { useAuth0 } from '@auth0/auth0-react';
-import './styles/Home.css';
-import bulb from '../assets/bulb.svg';
 import { Link } from 'react-router-dom';
+import './styles/Home.css';
+import bulb from '../assets/bulb.png';
+import logoblanc from '../assets/logoblanc.png';
+import fil from '../assets/ENEDIS_FIL_CONCEPTUEL_FOND_BLANC_RVB_EXE_02.png';
+
 const Home = () => {
 	const { isAuthenticated, user } = useAuth0();
 
@@ -33,7 +36,14 @@ const Home = () => {
 				</Link>
 				{/* <div className="launchGame">C'est parti !</div> */}
 			</div>
-			<div className="basdepage">{/*import logo ENEDIS*/}</div>
+			<div className="basdepage">
+				<div className="fil">
+					<img src={fil} alt="deco" />
+				</div>
+				<div className="logo">
+					<img src={logoblanc} alt="ENEDIS" />
+				</div>
+			</div>
 		</div>
 	);
 };
