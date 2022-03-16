@@ -3,7 +3,7 @@ import Profils from '../components/Profils';
 import { useAuth0 } from '@auth0/auth0-react';
 import './styles/Home.css';
 import bulb from '../assets/bulb.svg';
-
+import { Link } from 'react-router-dom';
 const Home = () => {
 	const { isAuthenticated, user } = useAuth0();
 
@@ -24,12 +24,16 @@ const Home = () => {
 			</div>
 
 			<div className="astuces">
-				<span className="material-icons-outlined">tips_and_updates</span>
+				<img src={bulb} alt="astuce" />
 			</div>
 			<div className="defi">
 				Lancer le défi du jour
-				<div className="launchGame">C'est parti !</div>
+				<Link className="launchGame" to="/game">
+					C'est parti !
+				</Link>
+				{/* <div className="launchGame">C'est parti !</div> */}
 			</div>
+			<div className="basdepage">{/*import logo ENEDIS*/}</div>
 		</div>
 	);
 };

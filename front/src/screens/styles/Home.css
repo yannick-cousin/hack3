@@ -1,22 +1,28 @@
-.entete {
+.astuces {
 	display: flex;
-	flex-direction: column;
-	background-color: var(--main-back);
-}
-
-.title {
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
 	color: var(--main);
-	font-family: 'enedis';
-	margin-bottom: 12px;
-}
-.description {
-	/*background-color: #f6f6fe;*/
-	font-family: 'Public';
 }
 
 .defi {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.description {
+	font-family: 'Public';
+}
+
+.entete {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 12px;
+	background-color: var(--main-back);
 }
 
 .launchGame {
@@ -24,8 +30,17 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	font-size: 2em;
 	padding: 10px;
 	background-color: var(--main);
 	border-radius: 10px 10px 10px 10px;
 	color: white;
+	text-decoration: none;
+}
+
+.title {
+	color: var(--main);
+	font-size: 2em;
+	font-family: 'enedis';
+	margin-bottom: 12px;
 }
