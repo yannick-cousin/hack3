@@ -1,5 +1,5 @@
 .lastPageContainer {
-  height: 92vh;
+  height: 84vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,7 +10,7 @@
 .baiContainer {
   color: white;
   width: 90vw;
-  margin-top: 12px;
+  margin-top: 32px;
 }
 
 .toPrevContainer {
@@ -19,14 +19,19 @@
   background-color: var(--second);
 }
 
+.managerLastPageContainer {
+  background-color: var(--stat-back);
+  width: 90vw;
+}
+
 .resultContainer {
-  width: 95vw;
+  width: 90vw;
 }
 
 .progressContainer {
   background-color: var(--main);
-  height: 100px;
-  width: 100vw;
+  height: 150px;
+  width: 90vw;
   display: flex;
   justify-content: center;
   text-align: center;

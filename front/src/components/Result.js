@@ -1,26 +1,12 @@
-import axios from 'axios'
-import { useState, useEffect } from 'react'
 import check from '../assets/verified_black_24dp.svg'
 import './styles/Result.css'
 
-const Result = () => {
-  const [points, setPoints] = useState([])
-  const [id, setId] = useState(1)
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:4242/user/${id}`)
-      .then((res) => res.data)
-      .then((res) => console.log('points', res) || setPoints(res.points))
-  }, [])
-
-  console.log(points)
-
+const Result = (props) => {
   return (
     <div>
       <div className='resultText'>
         <p className='sousTitres'>Vos résultats</p>
-        <p className='txtNoir'>{points} POINTS</p>
+        <p className='txtNoir'>{props.points} POINTS</p>
       </div>
 
       <ul>
