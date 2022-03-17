@@ -31,9 +31,9 @@
   --stat-back: #60616c;
   --checkbox: #6fb1e7;
   --dark: #3b3c45;
-  --fontTitre: 'EnedisBold' 700, sans-serif;
-  --fontSoustitre: 'Public Sans' 600, sans-serif;
-  --fontBody: 'Public Sans' 400, sans-serif;
+  --fontTitre: 'EnedisBold';
+  --fontSoustitre: 'Public';
+  --fontBody: 'Public';
   --main-back-300: #daddfc;
   --main-back-200: #f6f6fe;
   --neutral-100: #f1f2f3;
@@ -65,6 +65,7 @@ ul {
   color: var(--main);
   font-family: var(--fontTitre);
   font-size: 28px;
+  margin: 24px;
 }
 
 .sousTitres {
@@ -88,6 +89,7 @@ ul {
 }
 
 .button2 {
+  border: none;
   border-radius: 20px;
   color: white;
   padding: 8px 20px;
