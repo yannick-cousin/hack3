@@ -1,0 +1,72 @@
+.astuces {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* font-size: 2em; */
+	color: var(--main);
+}
+
+.astuces img {
+	width: 25%;
+}
+
+.basdepage {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.defi {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.description {
+	font-family: 'Public';
+}
+
+.entete {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 12px;
+	background-color: var(--main-back);
+}
+
+.fil {
+	position: absolute;
+	top: -20vh;
+	width: 100%;
+}
+
+.fil img {
+	width: 100%;
+}
+
+.launchGame {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-size: 2em;
+	padding: 10px;
+	background-color: var(--main);
+	border-radius: 10px 10px 10px 10px;
+	color: white;
+	text-decoration: none;
+}
+
+.logo img {
+	display: flex;
+	width: 40%;
+}
+
+.title {
+	color: var(--main);
+	font-size: 2em;
+	font-family: 'enedis';
+	margin-bottom: 12px;
+}
