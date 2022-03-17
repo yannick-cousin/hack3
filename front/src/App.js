@@ -7,6 +7,7 @@ import Quizz from './screens/Quizz'
 import Login from './components/Login';
 import Prevention from './screens/Prevention';
 import Profil from './components/Profils';
+import ResultatTest from './components/ResultatTest';
 
 const App = () => {
 	// const { isAuthenticated, isLoading } = useAuth0();
@@ -21,6 +22,7 @@ const App = () => {
 				<Route path="/" element={<Home />} />
 				<Route path="/game" element={<Quizz />} />
 				<Route path="/preventions" element={<Prevention />} />
+				<Route path='/result' element={<ResultatTest/>}/>
 			</Routes>
 			{/* {isAuthenticated ? : <Login />} */}
 		</div>

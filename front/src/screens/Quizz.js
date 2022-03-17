@@ -8,10 +8,10 @@ const Quizz =()=>{
   const [nbQuestion,setNbQuestion]=useState(0)
   const [score,setScore]=useState(0)
   const [gameFinished,setGameFinished]=useState(false)
-  const handleValidation=()=>{
+  // const handleValidation=()=>{
 
 
-  }
+  // }
 
   const handleResult=(reponse)=>{
     const selectedAnswer = document.querySelector(reponse.value)
@@ -20,7 +20,7 @@ const Quizz =()=>{
     //
     // }
     setNbQuestion(nbQuestion+1)
-    if(nbQuestion==1){
+    if(nbQuestion===1){
       setGameFinished(true)
     }
     if(reponse.trueFalse){
@@ -32,24 +32,25 @@ const Quizz =()=>{
 
   useEffect(()=>{
     if(!questions){
-      axios.get(`http://localhost:3030/questions`).
-      then((res)=>res.data).
-      then((res)=>console.log(res) || setQuestions(res))
+      axios.get(`http://localhost:3030/questions`)
+      .then((res)=>res.data)
+      .then((res)=>console.log(res) || setQuestions(res))
     }else{
       console.log('ELSE QUESTION',questions)
       let idQuestion = 0
       idQuestion = Math.floor(Math.random() * questions.length)
       setSelectedQuestion(questions[idQuestion])
       console.log('IDQUESTIONFRONT',idQuestion)
-      axios.get(`http://localhost:3030/reponses/${questions[idQuestion].id}`).
-      then((res)=>res.data).then((res)=>console.log(res)||setReponses(res))
+      axios.get(`http://localhost:3030/reponses/${questions[idQuestion].id}`)
+      .then((res)=>res.data)
+      .then((res)=>console.log(res)||setReponses(res))
     }
   },[questions,nbQuestion])
 
 
   return(
     <div>
-      {gameFinished?"":<div className='quizzContainer'>
+      {gameFinished?<Link  score={score}/>:<div className='quizzContainer'>
         <h1 className='title' >Quizz</h1>
         <h2 className='question'>{selectedQuestion.question}</h2>
         <div className='answersContainer'>

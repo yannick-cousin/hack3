@@ -1,4 +1,6 @@
 const Game = () => {
-	return <div></div>;
+	return <div>
+		Vous avez accompli le jeu du jour voir vos résultats
+	</div>;
 };
 export default Game;
