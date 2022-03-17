@@ -3,4 +3,27 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 100vw;
+  background-color: var(--main-back-200);
+}
+
+.baiContainer {
+  color: white;
+  width: 95vw;
+}
+
+.toPrevContainer {
+}
+
+.resultContainer {
+  width: 95vw;
+}
+
+.progressContainer {
+  background-color: var(--main);
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }

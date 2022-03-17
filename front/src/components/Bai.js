@@ -1,5 +1,5 @@
 import './styles/Bai.css'
-import conv from '../assets/conversensation.png'
+import conv from '../assets/conversationBleu.png'
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -20,8 +20,11 @@ const Bai = (props) => {
   return (
     <div>
       <div className={!props.baiOpen ? 'lpButtonContainer' : 'hidden'}>
-        <button className='titresSections' onClick={() => props.setBaiOpen(true)}>
-          Votre retour
+        <button className=' lpButton' onClick={() => props.setBaiOpen(true)}>
+          <div className='imgConversation'>
+            <img src={conv} alt='bulleDeConversation' width='50px' />
+          </div>
+          <div className='titresSections textButton'>Votre retour concernant la sécurité</div>
         </button>
       </div>
       <div className={props.baiOpen ? 'lpPopupContainer' : 'hidden'}>

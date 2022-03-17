@@ -6,7 +6,7 @@ const ToPrevention = () => {
     <Link to={`/preventions/`}>
       <div className='start'>
         <img src={folder} />
-        <div className='textToInfoPrev'>Informations prévention</div>
+        <div className='titresSections blabla'>Informations prévention</div>
       </div>
     </Link>
   )
