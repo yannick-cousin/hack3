@@ -1,7 +1,6 @@
 import './styles/Bai.css'
 import conv from '../assets/conversationBleu.png'
 import { useState } from 'react'
-import axios from 'axios'
 
 const Bai = (props) => {
   const [updateRetour, setUpdateRetour] = useState('')
