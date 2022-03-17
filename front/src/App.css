@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
 
-font-family: 'Public Sans', sans-serif;
+/* font-family: 'Public Sans', sans-serif; */
 
 @font-face {
 	font-family: 'EnedisBold';
@@ -11,7 +11,6 @@ font-family: 'Public Sans', sans-serif;
 	font-family: 'Enedis';
 	src: local('Enedis'), url('./fonts/enedis.ttf') format('truetype');
 }
-
 
 :root {
 	--main: #1423dc;
@@ -24,6 +23,11 @@ font-family: 'Public Sans', sans-serif;
 	--fontTitre : 'EnedisBold' 700, sans-serif;
 	--fontSoustitre: 'Public Sans' 600, sans-serif; 
 	--fontBody :'Public Sans' 400, sans-serif;
+	--main-back-300: #daddfc;
+	--main-back-200: #f6f6fe;
+	--neutral-100: #f1f2f3;
+	--neutral-200: #e9ebec;
+	--neutral-300: #dee0e3;
 }
 
 * {
