@@ -1,13 +1,14 @@
 .header {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 8vh;
 }
 
 .user {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	margin: 12px;
-	font-family: 'Public';
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 12px;
+  font-family: 'Public';
 }

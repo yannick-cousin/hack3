@@ -1,99 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
 
 @font-face {
-	font-family: 'EnedisBold';
-	src: local('Enedis-Bold'), url('./fonts/Enedis-Bold.ttf') format('truetype');
+  font-family: 'EnedisBold';
+  src: local('Enedis-Bold'), url('./fonts/Enedis-Bold.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Enedis';
-	src: local('Enedis'), url('./fonts/enedis.ttf') format('truetype');
+  font-family: 'Enedis';
+  src: local('Enedis'), url('./fonts/enedis.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Public';
-	src: local('PublicSans'), url('./fonts/PublicSans.ttf') format('truetype');
+  font-family: 'Public';
+  src: local('PublicSans'), url('./fonts/PublicSans.ttf') format('truetype');
 }
 
 *,
 ::before,
 ::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-	--main: #1423dc;
-	--second: #96cd32;
-	--main-back: #F6F6FE;
-	--titreAccueil: #4D59EF; 
-	--stat-back: #60616C; 
-	--checkbox: #6FB1E7; 
-	--dark: #3B3C45; 
-	--fontTitre : 'EnedisBold';
-	--fontSoustitre: 'Public'; 
-	--fontBody :'Public';
-	--main-back-300: #daddfc;
-	--main-back-200: #f6f6fe;
-	--neutral-100: #f1f2f3;
-	--neutral-200: #e9ebec;
-	--neutral-300: #dee0e3;
+  --main: #1423dc;
+  --second: #96cd32;
+  --main-back: #f6f6fe;
+  --titreAccueil: #4d59ef;
+  --stat-back: #60616c;
+  --checkbox: #6fb1e7;
+  --dark: #3b3c45;
+  --fontTitre: 'EnedisBold';
+  --fontSoustitre: 'Public';
+  --fontBody: 'Public';
+  --main-back-300: #daddfc;
+  --main-back-200: #f6f6fe;
+  --neutral-100: #f1f2f3;
+  --neutral-200: #e9ebec;
+  --neutral-300: #dee0e3;
 }
 
 * {
-	font-family: var(--fontBody);
-	font-size: 14px;
-	color :var(--dark); 
+  font-family: var(--fontBody);
+  font-size: 14px;
+  color: var(--dark);
 }
-
 
 body {
-	overflow-x: hidden;
-	/* background-color: whitesmoke; */
+  overflow-x: hidden;
+  /* background-color: whitesmoke; */
 }
 
-
 a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .titres {
-	color : var(--main);
-	font-family: var(--fontTitre); 
-	font-size: 28px;
-	margin: 24px; 
+  color: var(--main);
+  font-family: var(--fontTitre);
+  font-size: 28px;
+  margin: 24px;
 }
 
 .sousTitres {
-	color: var(--main);
-	font-family: var(--fontSoustitre);
-	font-size: 24px; 
+  color: var(--main);
+  font-family: var(--fontSoustitre);
+  font-size: 24px;
 }
 
-.titresSections{
-	font-family: var(--fontBody);
-	font-size: 24px;
+.titresSections {
+  font-family: var(--fontBody);
+  font-size: 24px;
 }
 
 .button1 {
-	border-radius: 20px; 
-	color: white; 
-	padding: 8px 20px; 
-	background-color: var(--main);
-	min-width: fit-content;
-	margin: 5px; 
+  border-radius: 20px;
+  color: white;
+  padding: 8px 20px;
+  background-color: var(--main);
+  min-width: fit-content;
+  margin: 5px;
 }
 
 .button2 {
-	border : none; 
-	border-radius: 20px; 
-	color: white; 
-	padding: 8px 20px; 
-	background-color: var(--second);
-	min-width: fit-content;
-	margin: 5px; 
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 8px 20px;
+  background-color: var(--second);
+  min-width: fit-content;
+  margin: 5px;
 }
 
+.hidden {
+  display: none;
+}
 
+.txtNoir {
+  color: var(--dark);
+}
