@@ -1,5 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+
+font-family: 'Public Sans', sans-serif;
+
+@font-face {
+	font-family: 'EnedisBold';
+	src: local('Enedis-Bold'), url('./fonts/Enedis-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Enedis';
+	src: local('Enedis'), url('./fonts/enedis.ttf') format('truetype');
+}
+
+
 :root {
 	--main: #1423dc;
 	--second: #96cd32;
-	--main-back: #daddfc;
+	--main-back: #F6F6FE;
+	--titreAccueil: #4D59EF; 
+	--stat-back: #60616C; 
+	--checkbox: #6FB1E7; 
+	--dark: #3B3C45; 
+	--fontTitre : 'EnedisBold' 700, sans-serif;
+	--fontSoustitre: 'Public Sans' 600, sans-serif; 
+	--fontBody :'Public Sans' 400, sans-serif;
+}
+
+* {
+	font-family: var(--fontBody);
+	font-size: 14px;
+	color :var(--dark); 
+}
+
+a {
+	text-decoration: none;
+}
+
+.titres {
+	color : var(--main);
+	font-family: var(--fontTitre); 
+	font-size: 28px;
+}
+
+.sousTitres {
+	color: var(--main);
+	font-family: var(--fontSoustitre);
+	font-size: 24px; 
+}
+
+.titresSections{
+	font-family: var(--fontBody);
+	font-size: 24px;
+}
+
+.button1 {
+	border-radius: 20px; 
+	color: white; 
+	padding: 8px 20px; 
+	background-color: var(--main);
+	min-width: fit-content;
+	margin: 5px; 
+}
+
+.button2 {
+	border-radius: 20px; 
+	color: white; 
+	padding: 8px 20px; 
+	background-color: var(--second);
+	min-width: fit-content;
+	margin: 5px; 
 }

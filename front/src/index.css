@@ -16,12 +16,4 @@ body {
 	color: white;
 } */
 
-@font-face {
-	font-family: 'Public';
-	src: local('Public'), url('./fonts/PublicSans.ttf') format('truetype');
-}
 
-@font-face {
-	font-family: 'Enedis';
-	src: local('Enedis'), url('./fonts/enedis.ttf') format('truetype');
-}
