@@ -1,41 +1,4 @@
-<<<<<<< HEAD
-.title{
-    color: var(--main);
-}
-.question{
-    color: black;
-    margin:3rem 0 3rem 0;
-}
-.quizzContainer{
-    align-items: center;
-    color: var(--main-back);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
 
-}
-.answersContainer{
-    display: flex;
-    flex-direction: column;
-}
-.answer{
-    background-color: var(--main);
-    border-color: var(--main);
-    border-radius: 1rem;
-    color: white;
-    height:3rem;
-    margin:1rem;
-    width: 18rem;
-}
-.validation{
-    background-color: var(--second);
-    border-color: var(--second);
-    border-radius: 1rem;
-    color:white;
-    height: 2rem;
-    width: 10rem;
-}
-=======
 .title {
   color: var(--main);
 }
@@ -95,4 +58,4 @@
   height: 2rem;
   width: 10rem;
 }
->>>>>>> ef74f4d88af0d83b0e059fd83611978ee18d5b99
+
