@@ -3,7 +3,7 @@ const connection = require('../../config/db')
 const db = connection.promise()
 
 const findMany=()=>{
-    return db.query('SELECT id, firstname, lastname, points, manager, admin,  isTechnician_id from users').then(([result])=>result)
+    return db.query('SELECT id, firstname, lastname, points, manager, admin,  isTechnician_id FROM users').then(([result])=>result)
 }
 
 const findOne = id =>{

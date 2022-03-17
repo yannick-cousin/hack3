@@ -7,7 +7,7 @@ usersRouter.get('/',(req,res)=>{
     const user=[]
     .then(result => {
         result.forEach(us=> user.push({
-            id:us.id,
+            id: us.id,
             firstname: us.firstname,
             lastname: us.lastname,
             points: us.points,

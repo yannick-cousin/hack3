@@ -1,0 +1,10 @@
+.userWrapper {
+	height: 3rem;
+	display: flex;
+	align-content: flex-end;
+}
+.userPicture {
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+}
