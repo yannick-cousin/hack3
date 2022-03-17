@@ -37,11 +37,9 @@ const Home = () => {
 			</div>
 			<Logout />
 			<div className="basdepage">
-				{/* <div className="fil">
-					<img src={fil} alt="deco" />
-				</div> */}
+
 				<div className="logo">
-					<img src={logoblanc} alt="ENEDIS" />
+					{/*<img src={logoblanc} alt="ENEDIS" />*/}
 				</div>
 				
 			</div>

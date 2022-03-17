@@ -7,14 +7,14 @@ import ResultatTest from '../components/ResultatTest'
 import interrogation from '../assets/questions.svg'
 
 const Quizz = () => {
-  const [questions, setQuestions] = useState()
-  const [selectedQuestion, setSelectedQuestion] = useState('')
-  const [reponses, setReponses] = useState(0)
-  const [nbQuestion, setNbQuestion] = useState(0)
-  const [score, setScore] = useState(0)
-  const [gameFinished, setGameFinished] = useState(false)
-  const [previousQuestion, setPreviousQuestion] = useState(0)
-  const handleValidation = () => {}
+	const [questions, setQuestions] = useState();
+	const [selectedQuestion, setSelectedQuestion] = useState('');
+	const [reponses, setReponses] = useState(0);
+	const [nbQuestion, setNbQuestion] = useState(0);
+	const [score, setScore] = useState(0);
+	const [gameFinished, setGameFinished] = useState(false);
+	const [previousQuestion, setPreviousQuestion] = useState(0);
+
 
   console.log('Score', score)
 
