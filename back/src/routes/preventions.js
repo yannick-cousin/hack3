@@ -1,17 +1,39 @@
 const express = require('express')
-const connection = require('../../config/db')
-const Router = express.Router()
+const preventionRouter = express.Router()
+const Prevention = require('../models/preventions')
 
-Router.get('/', (req, res) => {
-  const sql = 'SELECT * FROM prevention'
 
-  connection.connect()
-
-  connection.query(sql, (err, result) => {
-    if (err) throw err
-    return res.status(200).json(result)
+preventionRouter.get('/', (req, res) => {
+    const prevention=[]
+    Prevention.findMany()
+      .then(result => {
+        result.forEach(pr=> prevention.push({
+            id: pr.id,
+            value: pr.title,
+            label: pr.title,
+            url: pr.url,
+            description: pr.description
+        }))
+        res.status(200).json(prevention)
+      })
+      .catch(err => {
+        res.status(500).send('Error retrieving prevention from database')
+      })
   })
-  console.log('GET on Prevention')
-})
+  
+  preventionRouter.get('/:id', (req, res) => {
+    Prevention.findOne(req.params.id)
+      .then(prevention => {
+        if (prevention) {
+          res.status(200).json(prevention)
+        } else {
+          res.status(404).send('prevention not found')
+        }
+      })
+      .catch(err => {
+        res.status(500).send('Error retrieving prevention from database')
+      })
+  }) 
 
-module.exports = Router
+
+module.exports = preventionRouter

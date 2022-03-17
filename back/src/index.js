@@ -1,10 +1,9 @@
+require('dotenv').config()
 const cors = require('cors')
 const express = require('express')
 const morgan = require('morgan')
-// const bodyParser = require('body-parser')
-require('dotenv').config()
-const connection = require('./config/db')
-const prevention = require('./src/routes/preventions')
+const bodyParser = require('body-parser')
+const connection = require('../config/db')
 const { setupRoutes } = require('./server')
 
 const app = express()
@@ -26,9 +25,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/public', express.static('public'))
 
 //routes
-app.use('/prevention', prevention)
-
-//setupRoutes(app)
+setupRoutes(app)
 
 app.listen(PORT, err => {
   // eslint-disable-next-line no-console
