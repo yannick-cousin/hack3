@@ -1,29 +1,40 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
-import Game from './screens/Game';
+import Connexion from './screens/Connexion';
+
 import Home from './screens/Home';
-import Quizz from './screens/Quizz'
-import Login from './components/Login';
+
+
 import Prevention from './screens/Prevention';
-import Profil from './components/Profils';
+import Quizz from './screens/Quizz';
+import LastPage from './screens/LastPage';
 
 const App = () => {
 	// const { isAuthenticated, isLoading } = useAuth0();
 	// if (isLoading) {
 	// 	return <div>Loading</div>;
 	// }
+	const { isAuthenticated, isLoading } = useAuth0();
 
-	return (
+	if (isLoading) {
+		return <div>Loading</div>;
+	}
+
+	return isAuthenticated ? (
 		<div className="App">
 			<Routes>
-				<Route path="/login" element={<Login />} />
+				<Route path="/connexion" element={<Connexion />} />
 				<Route path="/" element={<Home />} />
 				<Route path="/game" element={<Quizz />} />
 				<Route path="/preventions" element={<Prevention />} />
+				<Route path="/lastpage" element={<LastPage />} />
 			</Routes>
-			{/* {isAuthenticated ? : <Login />} */}
 		</div>
+	) : (
+		<>
+			<Connexion />
+		</>
 	);
 };
 

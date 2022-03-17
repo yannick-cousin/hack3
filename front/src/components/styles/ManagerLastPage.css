@@ -1,0 +1,24 @@
+.managerLastPage {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.boutonRond {
+  border-radius: 50px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.retours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

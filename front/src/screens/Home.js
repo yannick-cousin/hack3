@@ -1,20 +1,19 @@
-import Login from '../components/Login';
-import Profils from '../components/Profils';
-import { useAuth0 } from '@auth0/auth0-react';
 import { Link } from 'react-router-dom';
 import './styles/Home.css';
 import bulb from '../assets/bulb.png';
+import Header from '../components/Header';
 import logoblanc from '../assets/logoblanc.png';
+import Logout from '../components/Logout'; 
 import fil from '../assets/ENEDIS_FIL_CONCEPTUEL_FOND_BLANC_RVB_EXE_02.png';
 
 const Home = () => {
-	const { isAuthenticated, user } = useAuth0();
 
 	return (
-		<div>
-			{isAuthenticated ? <Login /> : ''}
+		<div className="home">
+			<Header />
+			{/* {isAuthenticated ? <Login /> : ''} */}
 			{/* <Profils /> */}
-			{console.log('Var USER', user)}
+			{/* {console.log('Var USER', user)} */}
 			<div className="entete">
 				<h1 className="title">
 					La sécurité est une compétence professionnelle
@@ -36,13 +35,21 @@ const Home = () => {
 				</Link>
 				{/* <div className="launchGame">C'est parti !</div> */}
 			</div>
+			<Logout />
 			<div className="basdepage">
+<<<<<<< HEAD
 				<div className="fil">
 					{/*<img src={fil} alt="deco" />*/}
 				</div>
+=======
+				{/* <div className="fil">
+					<img src={fil} alt="deco" />
+				</div> */}
+>>>>>>> ef74f4d88af0d83b0e059fd83611978ee18d5b99
 				<div className="logo">
 					{/*<img src={logoblanc} alt="ENEDIS" />*/}
 				</div>
+				
 			</div>
 		</div>
 	);

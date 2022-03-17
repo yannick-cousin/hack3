@@ -11,7 +11,13 @@ const findOne = id =>{
     return db.query(sql,[id]).then(([result])=>result[0])
 }
 
+//UPDATE ONE
+const update = (id, newAttributes) => {
+    return db.query('UPDATE users SET ? WHERE id= ?', [newAttributes, id])
+  }
+
 module.exports={
     findMany,
-    findOne
+    findOne,
+    update
 }

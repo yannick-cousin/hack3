@@ -1,0 +1,38 @@
+.lastPageContainer {
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-back-200);
+}
+
+.baiContainer {
+  color: white;
+  width: 90vw;
+  margin-top: 32px;
+}
+
+.toPrevContainer {
+  padding: 5vw;
+  width: 90vw;
+  background-color: var(--second);
+}
+
+.managerLastPageContainer {
+  background-color: var(--stat-back);
+  width: 90vw;
+}
+
+.resultContainer {
+  width: 90vw;
+}
+
+.progressContainer {
+  background-color: var(--main);
+  height: 150px;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

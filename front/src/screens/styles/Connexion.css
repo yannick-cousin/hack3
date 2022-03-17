@@ -1,0 +1,22 @@
+.connexion {
+	background-color: var(--main);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+.bienvenue {
+	background-color: white;
+	border-radius: 5%;
+	width: 70vw;
+	height: 50vh;
+}
+
+.boutonEntrer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 66px;
+	cursor: pointer;
+}
