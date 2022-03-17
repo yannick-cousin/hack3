@@ -1,5 +1,7 @@
 .blabla2 {
 	display: flex;
+	margin-top: 12px;
+	margin-bottom: 32px;
 	justify-content: center;
 	font-family: Public;
 }
@@ -78,7 +80,7 @@
 
 .premierebarre.active {
 	position: absolute;
-	left: 15px;
+	left: 14px;
 }
 
 .secondebarre {
