@@ -1,5 +1,13 @@
 :root {
-	--main: #1423dc;
-	--second: #96cd32;
-	--main-back: #daddfc;
+  --main: #1423dc;
+  --second: #96cd32;
+  --main-back: #daddfc;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
