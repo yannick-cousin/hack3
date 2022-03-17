@@ -15,8 +15,8 @@
 	width: 34px;
 	height: 34px;
 	border-radius: 50%;
-	border: solid 2px white;
-	color: white;
+	border: solid 2px #6fb1e7;
+	color: #6fb1e7;
 	cursor: pointer;
 }
 
@@ -35,7 +35,7 @@
 	height: 40px;
 	border-radius: 20px 0px 0px 20px;
 	margin: 12px;
-	background-color: var(--main-back);
+	background-color: var(--neutral-200);
 	transition: 0.5s;
 }
 
@@ -45,7 +45,7 @@
 	height: auto;
 	flex-direction: column;
 	border-radius: 20px 0px 0px 20px;
-	background-color: var(--main-back);
+	background-color: var(--neutral-200);
 	margin: 12px;
 }
 
@@ -55,7 +55,7 @@
 	font-size: 1em;
 	margin-top: 12px;
 	margin-left: 12px;
-	color: white;
+	color: black;
 }
 
 .folders {
@@ -117,7 +117,7 @@
 
 .titre {
 	display: flex;
-	color: white;
+	color: black;
 	/* width: 100%; */
 	height: 100%;
 	/* margin-left: 20px; */
