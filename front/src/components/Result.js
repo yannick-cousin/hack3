@@ -4,13 +4,14 @@ import check from '../assets/verified_black_24dp.svg'
 import './styles/Result.css'
 
 const Result = () => {
-  const [points, setPoints] = useState()
+  const [points, setPoints] = useState([])
+  const [id, setId] = useState(1)
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACK}/users/`)
-      .then((response) => response.data)
-      .then((data) => setPoints(data))
+      .get(`http://localhost:4242/user/${id}`)
+      .then((res) => res.data)
+      .then((res) => console.log('points', res) || setPoints(res.points))
   }, [])
 
   console.log(points)

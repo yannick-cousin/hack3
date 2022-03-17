@@ -14,7 +14,7 @@ const Prevention = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACK}/prevention/`)
+      .get(`http://localhost:4242/prevention/`)
       .then((response) => response.data)
       .then((data) => setDocuments(data))
   }, [])
