@@ -1,7 +1,7 @@
-import { useState } from 'react';
+
 
 const ResultatTest = (props) => {
-	const [result, setResult] = useState(6);
+	
 
 	const calculResult = () => {
 		if (props.score >= 20) {

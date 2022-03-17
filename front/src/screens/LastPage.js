@@ -49,9 +49,9 @@ const LastPage = () => {
         <div className={!baiOpen ? 'progressContainer' : 'hidden'}>
           <Progress />
         </div>
-        <div>
-          <Footer />
-        </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   )

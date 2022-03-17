@@ -1,40 +1,61 @@
+
 .title {
-	color: var(--main);
+  color: var(--main);
 }
 .question {
-	color: black;
-	margin: 3rem 12px 3rem 12px;
+  color: black;
+  margin: 3rem 12px 3rem 12px;
+}
+
+.interrogation {
+  position: absolute;
+  top: -2.5vh;
+  left: 5vw;
 }
 
 .quizzContainer {
-	align-items: center;
-	background-color: var(--main-back);
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+  align-items: center;
+  background-color: var(--main-back);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 84vh;
+}
+
+.quizz {
+  display: flex;
+  height: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
 }
 
 .answersContainer {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
 
 .answer {
-	background-color: var(--main);
-	border-color: var(--main);
-	border-radius: 2rem;
-	color: white;
-	height: 3rem;
-	margin: 1rem;
-	width: 18rem;
-	cursor: pointer;
+  background-color: var(--main);
+  border-color: var(--main);
+  border-radius: 2rem;
+  color: white;
+  height: 3rem;
+  margin: 1rem;
+  width: 18rem;
+  cursor: pointer;
 }
 
 .validation {
-	background-color: var(--second);
-	border-color: var(--second);
-	border-radius: 1rem;
-	color: white;
-	height: 2rem;
-	width: 10rem;
+  background-color: var(--second);
+  border-color: var(--second);
+  border-radius: 1rem;
+  color: white;
+  height: 2rem;
+  width: 10rem;
 }
+
