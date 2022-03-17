@@ -1,18 +1,22 @@
 .lastPageContainer {
+  height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
   background-color: var(--main-back-200);
 }
 
 .baiContainer {
   color: white;
-  width: 95vw;
+  width: 90vw;
+  margin-top: 12px;
 }
 
 .toPrevContainer {
+  padding: 5vw;
+  width: 90vw;
+  background-color: var(--second);
 }
 
 .resultContainer {

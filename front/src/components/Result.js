@@ -19,8 +19,8 @@ const Result = () => {
   return (
     <div>
       <div className='resultText'>
-        <p className='sousTitres txtNoir'>Vos résultats</p>
-        <p className='sousTitres txtNoir'>{points} points</p>
+        <p className='sousTitres'>Vos résultats</p>
+        <p className='txtNoir'>{points} POINTS</p>
       </div>
 
       <ul>

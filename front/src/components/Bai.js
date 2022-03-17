@@ -28,21 +28,23 @@ const Bai = (props) => {
         </button>
       </div>
       <div className={props.baiOpen ? 'lpPopupContainer' : 'hidden'}>
-        <div className='popupLogo'>{/* <img src={conv} alt='bulleDeConversation' /> */}</div>
+        <div className='popupLogo'>
+          <img src={conv} alt='bulleDeConversation' width='70px' />
+        </div>
 
         <form className='retourForm'>
-          <input
+          <textarea
             type='text'
             className='inputRetour'
             placeholder='Quelles sont les difficultés que vous rencontrez à appliquer ces mesures de sécurité ?'
             onChange={(e) => changeRetour(e)}
             value={updateRetour}
-          ></input>
+          ></textarea>
           <div>
             <input type='checkbox' id='sendToSecu' name='sendToSecu' value='sendToSecu'></input>
             <label for='sendToSecu'>Envoyer au responsable de sécurité uniquement</label>
           </div>
-          <button type='button' className='buttonSendRetour' onClick={() => sendRetour()}>
+          <button type='button' className='button1' onClick={() => sendRetour()}>
             C'est parti !
           </button>
         </form>
