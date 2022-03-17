@@ -1,6 +1,8 @@
 import './styles/Quizz.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import ResultatTest from '../components/ResultatTest';
 
 const Quizz = () => {
@@ -13,19 +15,16 @@ const Quizz = () => {
 	const [previousQuestion, setPreviousQuestion] = useState(0);
 	const handleValidation = () => {};
 
+	console.log('Score', score);
+
 	const handleResult = (reponse) => {
 		const selectedAnswer = document.querySelector(reponse.value);
-		//console.log('HANDLERESULT SELECTEDANSWER QUERYSELECTOR', selectedAnswer);
-		// for(let i=0;selectedAnswer.length;i++){
-		//
-		// }
 		setNbQuestion(nbQuestion + 1);
 		if (nbQuestion === 4) {
 			setGameFinished(true);
 		}
 		if (reponse.trueFalse) {
 			setScore(score + 5);
-			console.log('Score', score);
 		}
 	};
 
@@ -36,13 +35,10 @@ const Quizz = () => {
 				.then((res) => res.data)
 				.then((res) => setQuestions(res));
 		} else {
-			//console.log('ELSE QUESTION', questions);
 			let newArr = questions.splice(previousQuestion - 1, 1);
-			//console.log('enleve', newArr);
 			let idQuestion = 0;
 			idQuestion = Math.floor(Math.random() * questions.length);
 			setSelectedQuestion(questions[idQuestion]);
-			//console.log('IDQUESTIONFRONT', idQuestion);
 			setPreviousQuestion(questions[idQuestion].id);
 			axios
 				.get(
@@ -55,6 +51,7 @@ const Quizz = () => {
 
 	return (
 		<div>
+			<Header />
 			{gameFinished ? (
 				<ResultatTest score={score} />
 			) : (
@@ -76,6 +73,7 @@ const Quizz = () => {
 					</div>
 				</div>
 			)}
+			<Footer />
 		</div>
 	);
 };

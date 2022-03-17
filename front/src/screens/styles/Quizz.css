@@ -1,15 +1,14 @@
 .title {
 	color: var(--main);
 }
-
 .question {
 	color: black;
-	margin: 3rem 0 3rem 0;
+	margin: 3rem 12px 3rem 12px;
 }
 
 .quizzContainer {
 	align-items: center;
-	color: var(--main-back);
+	background-color: var(--main-back);
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -23,11 +22,12 @@
 .answer {
 	background-color: var(--main);
 	border-color: var(--main);
-	border-radius: 1rem;
+	border-radius: 2rem;
 	color: white;
 	height: 3rem;
 	margin: 1rem;
 	width: 18rem;
+	cursor: pointer;
 }
 
 .validation {
