@@ -5,6 +5,8 @@ const morgan = require('morgan');
 require('dotenv').config();
 const connection = require('./config/db');
 const prevention = require('./src/routes/preventions');
+const questions = require('./src/routes/questions')
+const reponses = require('./src/routes/reponses')
 const { setupRoutes } = require('./server');
 
 const app = express();
@@ -29,7 +31,8 @@ app.use('/public', express.static('public'));
 
 //routes
 app.use('/prevention', prevention);
-
+app.use('/questions', questions)
+app.use('/reponses', reponses)
 //setupRoutes(app)
 
 app.listen(PORT, (err) => {
