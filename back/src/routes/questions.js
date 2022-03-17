@@ -1,20 +1,15 @@
 const express = require('express')
-const connection = require('../../config/db')
-const Router = express.Router()
+const questionsRouter = express.Router()
+const Question = require('../models/questions')
 
-Router.get('/', (req, res) => {
-  const sql = 'SELECT * FROM quizz'
-
-  connection.connect()
-
-  connection.query(sql, (err, result) => {
-    if (err) {
-      console.error('Error GET quizz', err)
-    } else {
-      res.status(200).json(result)
-    }
-  })
-  console.log('GET on quizz !')
+questionsRouter.get('/', (req, res) => {
+  Question.findMany()
+    .then(question => {
+      res.status(200).json(question)
+    })
+    .catch(err => {
+      res.status(500).send('Error retrieving questions from database')||console.log(err)
+    })
 })
 
-module.exports = Router
+module.exports = questionsRouter;
