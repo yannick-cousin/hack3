@@ -1,0 +1,10 @@
+.progressGreen {
+  background-color: green;
+  color: green;
+  width: 60%;
+  height: 20px;
+}
+.progressGrey {
+  background-color: grey;
+  width: 40%;
+}

@@ -19,7 +19,13 @@ const Result = () => {
       <p>{points} points</p>
       <ul>
         <li>
-          <p>Niveau 1</p>
+          <p>niveau 1</p>
+        </li>
+        <li>
+          <p>niveau 2</p>
+        </li>
+        <li>
+          <p>niveau 3</p>
         </li>
       </ul>
     </div>
