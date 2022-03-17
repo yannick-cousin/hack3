@@ -28,16 +28,11 @@ const Prevention = () => {
 				<h1 className="title">
 					La sécurité est une compétence professionnelle
 				</h1>
-				<p className="description">
-					Parce que rentrer chez soi en bonne santé est important, nous
-					proposons, chaque jour, un petit quizz ou une petite vidéo afin de
-					vous rappeler quelques élements de sécurité de façon ludique.{' '}
-				</p>
 			</div>
 			<div className="folders">
 				<div className="start">
 					<img src={folder} />
-					<div className="blabla">Informations prévention</div>
+					<div className="blabla titresSections">Informations prévention</div>
 				</div>
 				<div className="blabla2">Vous trouverez ici les fondamentaux</div>
 				<div className="documents">
@@ -46,7 +41,7 @@ const Prevention = () => {
 							key={doc.id}
 							title={doc.title}
 							description={doc.description}
-							url={doc.title}
+							url={doc.url}
 						/>
 					))}
 				</div>
