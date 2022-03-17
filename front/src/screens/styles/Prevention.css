@@ -1,0 +1,41 @@
+.blabla2 {
+	display: flex;
+	justify-content: center;
+	font-family: Public;
+}
+
+.documents {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.elDoc {
+	background-color: var(--main-back);
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.description {
+	display: flex;
+	font-family: Public;
+}
+
+.titre {
+	font-family: Enedis;
+}
+
+.start {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--second);
+	color: white;
+	/* margin-left: 12px;
+	margin-right: 12px; */
+	font-size: 1.5em;
+	font-family: Public;
+}
+
+.start img {
+	width: 20%;
+}
