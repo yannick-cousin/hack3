@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 import Documents from '../components/Documents';
-import Login from '../components/Login';
+import Header from '../components/Header';
 import folder from '../assets/dossier_blanc.png';
 import './styles/Prevention.css';
 
 const Prevention = () => {
 	const [documents, setDocuments] = useState([]);
-	const { isAuthenticated, user } = useAuth0();
+	// const { isAuthenticated, user } = useAuth0();
 
 	console.log(documents);
 
@@ -21,9 +21,10 @@ const Prevention = () => {
 
 	return (
 		<div className="prevention">
-			{isAuthenticated ? <Login /> : ''}
+			<Header />
+			{/* {isAuthenticated ? <Login /> : ''} */}
 			{/* <Profils /> */}
-			{console.log('Var USER', user)}
+			{/* {console.log('Var USER', user)} */}
 			<div className="entete">
 				<h1 className="title">
 					La sécurité est une compétence professionnelle

@@ -1,0 +1,21 @@
+.footer {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.fil {
+	position: absolute;
+	top: -12vh;
+	width: 100%;
+}
+
+.fil img {
+	width: 100%;
+}
+
+.logo img {
+	display: flex;
+	width: 40%;
+}
