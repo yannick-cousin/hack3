@@ -32,7 +32,7 @@ const Prevention = () => {
 			<div className="folders">
 				<div className="start">
 					<img src={folder} />
-					<div className="blabla">Informations prévention</div>
+					<div className="blabla titresSections">Informations prévention</div>
 				</div>
 				<div className="blabla2">Vous trouverez ici les fondamentaux</div>
 				<div className="documents">

@@ -1,9 +1,13 @@
+.blabla {
+	color: white; 
+}
+
 .blabla2 {
 	display: flex;
 	margin-top: 12px;
 	margin-bottom: 32px;
 	justify-content: center;
-	font-family: Public;
+	font-family: 'Public';
 }
 
 .buttomreveal {
@@ -53,7 +57,7 @@
 
 .description {
 	display: flex;
-	font-family: Public;
+	font-family: 'Public';
 	font-size: 1em;
 	margin-top: 12px;
 	margin-left: 12px;
@@ -62,6 +66,7 @@
 
 .folders {
 	margin-bottom: 12px;
+	width: 90vw;
 }
 
 .haut {
@@ -83,6 +88,11 @@
 	left: 14px;
 }
 
+.prevention {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .secondebarre {
 	position: absolute;
 	font-weight: bold;
@@ -102,7 +112,7 @@
 	background-color: var(--second);
 	color: white;
 	font-size: 1.5em;
-	font-family: Public;
+	font-family: 'Public';
 }
 
 .start img {
@@ -125,5 +135,5 @@
 	/* margin-left: 20px; */
 	align-items: center;
 	font-size: 1.25em;
-	font-family: Enedis;
+	font-family: 'Enedis';
 }
