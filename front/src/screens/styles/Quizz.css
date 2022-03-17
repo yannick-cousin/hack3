@@ -22,6 +22,10 @@
   height: 84vh;
 }
 
+.pageQuizz {
+  height: 84vh;
+}
+
 .quizz {
   display: flex;
   height: 70%;
