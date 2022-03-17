@@ -63,7 +63,7 @@ a {
 	color : var(--main);
 	font-family: var(--fontTitre); 
 	font-size: 28px;
-	margin: 24px; 
+	margin: 16px; 
 }
 
 .sousTitres {
