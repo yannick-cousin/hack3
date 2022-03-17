@@ -3,9 +3,9 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 const Quizz =()=>{
   const [questions,setQuestions]=useState()
-  const [change,setChange]=useState(false)
   const [selectedQuestion,setSelectedQuestion]=useState('')
   const [reponses,setReponses]=useState('')
+  const [nbQuestion,setNbQuestion]=useState()
   const randomQuestion=(questions)=>{
     if(questions) {
       let idQuestion = 0
@@ -19,7 +19,6 @@ const Quizz =()=>{
       axios.get(`http://localhost:3030/questions`).
       then((res)=>res.data).
       then((res)=>console.log(res) || setQuestions(res))
-      setChange(true)
     }else{
       console.log('ELSE QUESTION',questions)
       let idQuestion = 0
@@ -30,9 +29,7 @@ const Quizz =()=>{
       then((res)=>res.data).then((res)=>console.log(res)||setReponses(res))
     }
   },[questions])
-  useEffect(()=>{
 
-  },[change])
 
   return(
     <div>
