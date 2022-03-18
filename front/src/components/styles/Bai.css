@@ -42,3 +42,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+textarea{
+  border: none; 
+}
+
+#sendToSecu{
+  padding: 4px;
+}

@@ -39,7 +39,7 @@ const Home = (props) => {
 			<div className="defi">
 				<div className="go">
 					<p> Lancer le défi du jour {' '}</p> 
-					<img src={Info} alt="info" style={{ width: '8%', marginLeft: '16px'}}/> 
+					<span className="infobulle" aria-label="En 2019, 17 accidents d'origine électrique avaient pour cause le port d'EPI incomplet" ><img src={Info} alt="info" style={{ width: '20%'}}/></span>
 				</div>
 				<Link className="launchGame" to="/game">
 					C'est parti !
