@@ -5,8 +5,6 @@ import { useState } from 'react';
 const Documents = (props) => {
 	const [viewMore, setViewMore] = useState(false);
 
-	console.log(props.title);
-
 	const iWantView = () => {
 		setViewMore(!viewMore);
 	};

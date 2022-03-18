@@ -25,7 +25,7 @@ const ViewVideo = (props) => {
 		}
 	}, [url, nbUrl]);
 
-	console.log(selectedUrl);
+	//console.log(selectedUrl);
 
 	return (
 		<div className="viewvideo">
@@ -51,7 +51,11 @@ const ViewVideo = (props) => {
 				</button>
 			</div>
 			<div className={!resultatTest && 'hidden'}>
-				<ResultatTest score={score} />
+				<ResultatTest
+					score={score}
+					setIncrementPoints={props.setIncrementPoints}
+					incrementPoints={props.incrementPoints}
+				/>
 			</div>
 			<Footer />
 		</div>

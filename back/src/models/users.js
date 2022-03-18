@@ -13,6 +13,7 @@ const findOne = id => {
 
 //UPDATE ONE
 const update = (id, newAttributes) => {
+  console.log(newAttributes)
   return db.query('UPDATE users SET ? WHERE id= ?', [newAttributes, id])
 }
 

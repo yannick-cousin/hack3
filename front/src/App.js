@@ -17,13 +17,15 @@ const App = () => {
 	const [id, setId] = useState(1);
 	const [isManager, setIsManager] = useState([]);
 	const { isAuthenticated, isLoading } = useAuth0();
+	const [incrementPoints, setIncrementPoints] = useState(true);
+	const [previousPage, setPreviousPage] = useState(0);
 
 	useEffect(() => {
 		axios
 			.get(`${process.env.REACT_APP_BACK}/user/1`)
 			.then((res) => res.data)
 			.then((res) => console.log('points', res) || setDatas(res));
-	}, []);
+	}, [incrementPoints]);
 
 	useEffect(() => {
 		setPoints(datas.points);
@@ -35,7 +37,7 @@ const App = () => {
 		return <div>Loading</div>;
 	}
 
-	console.log(datas.firstname);
+	//console.log(datas.firstname);
 
 	return isAuthenticated ? (
 		<div className="App">
@@ -45,10 +47,24 @@ const App = () => {
 					path="/"
 					element={<Home isManager={isManager} firstname={datas.firstname} />}
 				/>
-				<Route path="/quizz" element={<Quizz firstname={datas.firstname} />} />
+				<Route
+					path="/quizz"
+					element={
+						<Quizz
+							firstname={datas.firstname}
+							setIncrementPoints={setIncrementPoints}
+							incrementPoints={incrementPoints}
+						/>
+					}
+				/>
 				<Route
 					path="/preventions"
-					element={<Prevention firstname={datas.firstname} />}
+					element={
+						<Prevention
+							firstname={datas.firstname}
+							previousPage={previousPage}
+						/>
+					}
 				/>
 				<Route
 					path="/lastpage"
@@ -57,10 +73,20 @@ const App = () => {
 							isManager={isManager}
 							points={points}
 							firstname={datas.firstname}
+							setPreviousPage={setPreviousPage}
 						/>
 					}
 				/>
-				<Route path="/game" element={<Game firstname={datas.firstname} />} />
+				<Route
+					path="/game"
+					element={
+						<Game
+							firstname={datas.firstname}
+							setIncrementPoints={setIncrementPoints}
+							incrementPoints={incrementPoints}
+						/>
+					}
+				/>
 				<Route
 					path="/result"
 					element={<Result firstname={datas.firstname} />}

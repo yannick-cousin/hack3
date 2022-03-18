@@ -14,8 +14,6 @@ const Prevention = (props) => {
 	const [documents, setDocuments] = useState([]);
 	// const { isAuthenticated, user } = useAuth0();
 
-	console.log(documents);
-
 	useEffect(() => {
 		axios
 			.get(`${process.env.REACT_APP_BACK}/prevention/`)
@@ -35,14 +33,22 @@ const Prevention = (props) => {
 						La sécurité est une compétence professionnelle
 					</h1>
 				</div>
-				<Link className="launchGame" to="/">
-					<div className="back">Retour à la page d'accueil</div>
-				</Link>
-
+				<div className={props.previousPage === 1 && 'hidden'}>
+					<Link className="launchGame" to="/">
+						<div className="back">Retour à la page d'accueil</div>
+					</Link>
+				</div>
+				<div className={props.previousPage === 0 && 'hidden'}>
+					<Link className="launchGame" to="/lastPage">
+						<div className="back">Retour à la page d'accueil</div>
+					</Link>
+				</div>
 				<div className="folders">
 					<div className="start">
-						<img src={folder} />
-						<div className="blabla titresSections">Informations prévention</div>
+						<img src={folder} width="50px" />
+						<div className="blabla titresSections textButton">
+							Informations prévention
+						</div>
 					</div>
 					<div className="blabla2">
 						Retrouvez des informations complémentaires concernant votre sécurité

@@ -1,17 +1,18 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 8vh;
+	top: 0;
 }
 
 .user {
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  font-family: 'Public';
+	display: flex;
+	align-items: center;
+	margin: 10px;
+	font-family: 'Public';
 }
 
 .user > p {
-  margin: 5px 10px;
+	margin: 5px 10px;
 }

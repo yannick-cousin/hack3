@@ -53,7 +53,11 @@ const Quizz = (props) => {
 		<div className="pageQuizz">
 			<Header firstname={props.firstname} />
 			{gameFinished ? (
-				<ResultatTest score={score} />
+				<ResultatTest
+					score={score}
+					setIncrementPoints={props.setIncrementPoints}
+					incrementPoints={props.incrementPoints}
+				/>
 			) : (
 				<div className="quizzContainer">
 					<div className="interrogation">
