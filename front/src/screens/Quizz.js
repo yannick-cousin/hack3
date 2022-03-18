@@ -41,7 +41,7 @@ const Quizz = (props) => {
       setSelectedQuestion(questions[idQuestion])
       setPreviousQuestion(questions[idQuestion].id)
       axios
-        .get(`http://localhost:3030/reponses/${questions[idQuestion].id}`)
+        .get(`http://localhost:4242/reponses/${questions[idQuestion].id}`)
         .then((res) => res.data)
         .then((res) => setReponses(res))
     }

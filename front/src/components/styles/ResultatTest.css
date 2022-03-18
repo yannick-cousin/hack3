@@ -1,0 +1,50 @@
+.echec{
+    padding: 30px 30px 30px 5px;
+    text-align: left;
+    background-color: #FFE0E6;
+    border: 5px solid #E10028;
+    margin: 100px 30px 30px 30px;
+    border-radius: 0px 10px 10px 10px;
+
+}
+
+.moyen{
+    display:flex;
+    flex-direction: space-around;
+    padding: 30px 30px 30px 5px;
+    text-align: left;
+    background-color:  #FFF6E0;
+    border: 5px solid #FFC358;
+    margin: 100px 30px 30px 30px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.good{
+    padding: 30px 30px 30px 5px;
+    text-align: left;
+    background-color: #E9F6F1;
+    border: 5px solid #41A57D;
+    margin: 100px 30px 30px 30px;
+    border-radius: 0px 10px 10px 10px;
+}
+
+.point{
+    margin: 30px -10px 40px 0px;
+    background-color: #FFFFFF; 
+    width: auto;
+    color: var(--main);
+    font-family: var(--fontSoustitre);
+    font-size: 20px;
+}
+
+.paraf{
+    color: var(--main);
+  font-family: var(--fontSoustitre);
+  font-size: 20px;
+}
+
+.buttonresgame{
+    text-align: center;
+    padding-top: 30px;
+
+}

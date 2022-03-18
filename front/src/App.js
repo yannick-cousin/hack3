@@ -1,10 +1,10 @@
 import './App.css'
-import axios from 'axios'
+import UserContextProvider from './context/UserContext'
 import { Routes, Route } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import Connexion from './screens/Connexion'
 import Game from './screens/Game'
-import { useState, useEffect } from 'react'
+import Result from './components/Result'
 
 import Home from './screens/Home'
 
@@ -13,41 +13,30 @@ import Quizz from './screens/Quizz'
 import LastPage from './screens/LastPage'
 
 const App = () => {
-  const [datas, setDatas] = useState([])
-  const [points, setPoints] = useState([])
-  const [id, setId] = useState(1)
-  const [isManager, setIsManager] = useState([])
+  
   const { isAuthenticated, isLoading } = useAuth0()
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:3030/user/1`)
-      .then((res) => res.data)
-      .then((res) => console.log('points', res) || setDatas(res))
-  }, [])
-
-  useEffect(() => {
-    setPoints(datas.points)
-    setId(datas.id)
-    setIsManager(datas.manager)
-  }, [datas])
+  
 
   if (isLoading) {
     return <div>Loading</div>
   }
 
-  console.log(datas.firstname)
+  
 
   return isAuthenticated ? (
     <div className='App'>
-      <Routes>
-        <Route path='/connexion' element={<Connexion />} />
-        <Route path='/' element={<Home isManager={isManager} firstname={datas.firstname} />} />
-        <Route path='/quizz' element={<Quizz firstname={datas.firstname} />} />
-        <Route path='/preventions' element={<Prevention firstname={datas.firstname} />} />
-        <Route path='/lastpage' element={<LastPage isManager={isManager} points={points} firstname={datas.firstname} />} />
-        <Route path='/game' element={<Game firstname={datas.firstname} />} />
-      </Routes>
+		<UserContextProvider>
+			<Routes>
+				<Route path='/connexion' element={<Connexion />} />
+				<Route path='/' element={<Home />} />
+				<Route path='/quizz' element={<Quizz  />} />
+				<Route path='/preventions' element={<Prevention />}/>
+				<Route path='/lastpage' element={<LastPage />} />
+				<Route path='/game' element={<Game />} />
+				<Route path='/result' element={<Result />}/>
+			</Routes>
+		</UserContextProvider>
     </div>
   ) : (
     <>

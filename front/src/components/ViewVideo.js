@@ -10,12 +10,12 @@ const ViewVideo = (props) => {
   const [selectedUrl, setSelectedUrl] = useState('')
   const [resultatTest, setResultatTest] = useState(false)
   const [nbUrl, setNbUrl] = useState(0)
-  const points = 10
+  const score = 10
 
   useEffect(() => {
     if (!url) {
       axios
-        .get(`http://localhost:3030/videos`)
+        .get(`http://localhost:4242/videos`)
         .then((res) => res.data)
         .then((res) => setUrl(res))
     } else {
@@ -47,10 +47,10 @@ const ViewVideo = (props) => {
         <button className='button2' onClick={() => setResultatTest(true)}>
           Voir mon score
         </button>
-        <div className={!resultatTest && 'hidden'}>
-          <ResultatTest points={points} />
-        </div>
       </div>
+        <div className={!resultatTest && 'hidden'}>
+          <ResultatTest score={score} />
+        </div>
       <Footer />
     </div>
   )
