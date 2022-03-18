@@ -1,146 +1,150 @@
+.back {
+	color: white;
+}
+
 .blabla {
-  color: white;
+	color: white;
 }
 
 .blabla2 {
-  text-align: center;
-  margin-top: 12px;
-  margin-bottom: 32px;
-  justify-content: center;
-  font-family: 'Public';
+	text-align: center;
+	margin-top: 12px;
+	margin-bottom: 32px;
+	justify-content: center;
+	font-family: 'Public';
 }
 
 .entetePrev {
-  width: 90vw;
+	width: 90vw;
 }
 
 .buttomreveal {
-  position: relative;
-  display: flex;
-  align-items: center;
-  /* justify-content: left; */
-  margin-left: 3px;
-  margin-top: 3px;
-  margin-right: 20px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: solid 2px #6fb1e7;
-  color: #6fb1e7;
-  cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	/* justify-content: left; */
+	margin-left: 3px;
+	margin-top: 3px;
+	margin-right: 20px;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	border: solid 2px #6fb1e7;
+	color: #6fb1e7;
+	cursor: pointer;
 }
 
 .cache {
-  display: none;
-  opacity: 0;
-  transition: 0.5s;
+	display: none;
+	opacity: 0;
+	transition: 0.5s;
 }
 
 .elDoc {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 12px;
-  height: 40px;
-  border-radius: 20px 0px 0px 20px;
-  margin: 12px;
-  background-color: var(--neutral-200);
-  transition: 0.5s;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 12px;
+	height: 40px;
+	border-radius: 20px 0px 0px 20px;
+	margin: 12px;
+	background-color: var(--neutral-200);
+	transition: 0.5s;
 }
 
 .elDoc.active {
-  position: relative;
-  display: flex;
-  height: auto;
-  flex-direction: column;
-  border-radius: 20px 0px 0px 20px;
-  background-color: var(--neutral-200);
-  margin: 12px;
+	position: relative;
+	display: flex;
+	height: auto;
+	flex-direction: column;
+	border-radius: 20px 0px 0px 20px;
+	background-color: var(--neutral-200);
+	margin: 12px;
 }
 
 .description {
-  display: flex;
-  font-family: 'Public';
-  font-size: 1em;
-  margin-top: 12px;
-  margin-left: 12px;
-  color: black;
+	display: flex;
+	font-family: 'Public';
+	font-size: 1em;
+	margin-top: 12px;
+	margin-left: 12px;
+	color: black;
 }
 
 .folders {
-  padding: 5vw;
-  width: 90vw;
-  background-color: var(--second);
+	padding: 5vw;
+	width: 90vw;
+	background-color: var(--second);
 }
 
 .haut {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: flex-start;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: flex-start;
 }
 
 .premierebarre {
-  position: absolute;
-  font-weight: bold;
-  left: 11px;
-  transition: 0.5s;
+	position: absolute;
+	font-weight: bold;
+	left: 10px;
+	transition: 0.5s;
 }
 
 .premierebarre.active {
-  position: absolute;
-  left: 14px;
+	position: absolute;
+	left: 14px;
 }
 
 .prevention {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 92vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 92vh;
 }
 .secondebarre {
-  position: absolute;
-  font-weight: bold;
-  right: 11px;
-  transition: 0.5s;
+	position: absolute;
+	font-weight: bold;
+	right: 11px;
+	transition: 0.5s;
 }
 
 .secondebarre.active {
-  position: absolute;
-  right: 15px;
+	position: absolute;
+	right: 15px;
 }
 
 .start {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--second);
-  color: white;
-  font-size: 1.5em;
-  font-family: 'Public';
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--second);
+	color: white;
+	font-size: 1.5em;
+	font-family: 'Public';
 }
 
 .start img {
-  width: 20%;
+	width: 20%;
 }
 
 .thelink {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin-top: 24px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	margin-top: 24px;
 }
 
 .titre {
-  display: flex;
-  color: black;
-  /* width: 100%; */
-  height: 100%;
-  /* margin-left: 20px; */
-  align-items: center;
-  font-size: 1.25em;
-  font-family: 'Enedis';
+	display: flex;
+	color: black;
+	/* width: 100%; */
+	height: 100%;
+	/* margin-left: 20px; */
+	align-items: center;
+	font-size: 1.25em;
+	font-family: 'Enedis';
 }
