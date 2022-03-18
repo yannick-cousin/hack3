@@ -10,6 +10,7 @@ const ViewVideo = (props) => {
   const [selectedUrl, setSelectedUrl] = useState('')
   const [resultatTest, setResultatTest] = useState(false)
   const [nbUrl, setNbUrl] = useState(0)
+  const points = 10
 
   useEffect(() => {
     if (!url) {
@@ -47,7 +48,7 @@ const ViewVideo = (props) => {
           Voir mon score
         </button>
         <div className={!resultatTest && 'hidden'}>
-          <ResultatTest />
+          <ResultatTest points={points} />
         </div>
       </div>
       <Footer />
