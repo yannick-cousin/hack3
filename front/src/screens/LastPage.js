@@ -1,4 +1,3 @@
-import axios from 'axios'
 import Bai from '../components/Bai'
 import Header from '../components/Header'
 import ToPrevention from '../components/ToPrevention'
@@ -9,25 +8,8 @@ import { useState, useEffect } from 'react'
 import './styles/LastPage.css'
 import Footer from '../components/Footer'
 
-const LastPage = () => {
-  const [datas, setDatas] = useState([])
-  const [points, setPoints] = useState([])
+const LastPage = (props) => {
   const [baiOpen, setBaiOpen] = useState(true)
-  const [id, setId] = useState(1)
-  const [isManager, setIsManager] = useState([])
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:4242/user/1`)
-      .then((res) => res.data)
-      .then((res) => console.log('points', res) || setDatas(res))
-  }, [])
-
-  useEffect(() => {
-    setPoints(datas.points)
-    setId(datas.id)
-    setIsManager(datas.manager)
-  }, [datas])
 
   return (
     <>
@@ -39,12 +21,12 @@ const LastPage = () => {
         <div className={!baiOpen ? 'toPrevContainer' : 'hidden'}>
           <ToPrevention />
         </div>
-        <div className={!baiOpen && isManager === 1 ? 'managerLastPageContainer' : 'hidden'}>
+        <div className={!baiOpen && props.isManager === 1 ? 'managerLastPageContainer' : 'hidden'}>
           <ManagerLastPage />
         </div>
 
         <div className={!baiOpen ? 'resultContainer' : 'hidden'}>
-          <Result points={points} />
+          <Result points={props.points} />
         </div>
         <div className={!baiOpen ? 'progressContainer' : 'hidden'}>
           <Progress />

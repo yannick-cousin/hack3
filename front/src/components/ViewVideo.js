@@ -8,7 +8,7 @@ const ViewVideo = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4242/videos`)
+      .get(`http://localhost:3030/videos`)
       .then((res) => res.data)
       .then((res) => setUrl(res))
   }, [])
