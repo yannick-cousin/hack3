@@ -13,7 +13,7 @@ const LastPage = (props) => {
 
   return (
     <>
-      <Header />
+      <Header firstname={props.firstname} />
       <div className='lastPageContainer'>
         <div className='baiContainer'>
           <Bai setBaiOpen={setBaiOpen} baiOpen={baiOpen} />

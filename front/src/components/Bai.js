@@ -41,11 +41,18 @@ const Bai = (props) => {
           ></textarea>
           <div>
             <input type='checkbox' id='sendToSecu' name='sendToSecu' value='sendToSecu'></input>
-            <label for='sendToSecu' style={{border :'none'}}>Envoyer au responsable de sécurité uniquement</label>
+            <label for='sendToSecu' style={{ border: 'none' }}>
+              Envoyer au responsable de sécurité uniquement
+            </label>
           </div>
-          <button type='button' className='button1' onClick={() => sendRetour()}>
-            C'est parti !
-          </button>
+          <div className='buttonsBai'>
+            <button type='button' className='button1 buttonBai' onClick={() => sendRetour()}>
+              C'est parti !
+            </button>
+            <button type='button' className='button1  buttonBai' onClick={() => sendRetour()}>
+              Pas maintenant !
+            </button>
+          </div>
         </form>
       </div>
     </div>

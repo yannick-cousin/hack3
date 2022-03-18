@@ -9,7 +9,7 @@ import folder from '../assets/dossier_blanc.png'
 import logoblanc from '../assets/logoblanc.png'
 import './styles/Prevention.css'
 
-const Prevention = () => {
+const Prevention = (props) => {
   const [documents, setDocuments] = useState([])
   // const { isAuthenticated, user } = useAuth0();
 
@@ -24,12 +24,12 @@ const Prevention = () => {
 
   return (
     <>
-      <Header />
+      <Header firstname={props.firstname} />
       <div className='prevention'>
         {/* {isAuthenticated ? <Login /> : ''} */}
         {/* <Profils /> */}
         {/* {console.log('Var USER', user)} */}
-        <div className='entete'>
+        <div className='entete entetePrev'>
           <h1 className='title'>La sécurité est une compétence professionnelle</h1>
         </div>
         <div className='folders'>

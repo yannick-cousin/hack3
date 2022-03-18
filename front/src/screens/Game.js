@@ -2,7 +2,7 @@ import Quizz from './Quizz'
 import ViewVideo from '../components/ViewVideo.js'
 import { useState, useEffect } from 'react'
 
-const Game = () => {
+const Game = (props) => {
   const [typeGame, setTypeGame] = useState()
 
   useEffect(() => {
@@ -15,12 +15,12 @@ const Game = () => {
     <div>
       {typeGame === 0 && (
         <div>
-          <Quizz />
+          <Quizz firstname={props.firstname} />
         </div>
       )}
       {typeGame === 1 && (
         <div>
-          <ViewVideo />
+          <ViewVideo firstname={props.firstname} />
         </div>
       )}
     </div>

@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import ResultatTest from '../components/ResultatTest'
 import interrogation from '../assets/questions.svg'
 
-const Quizz = () => {
+const Quizz = (props) => {
   const [questions, setQuestions] = useState()
   const [selectedQuestion, setSelectedQuestion] = useState('')
   const [reponses, setReponses] = useState(0)
@@ -49,7 +49,7 @@ const Quizz = () => {
 
   return (
     <div className='pageQuizz'>
-      <Header />
+      <Header firstname={props.firstname} />
       {gameFinished ? (
         <ResultatTest score={score} />
       ) : (

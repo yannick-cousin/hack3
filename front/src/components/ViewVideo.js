@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import ResultatTest from './ResultatTest'
 import './styles/ViewVideo.css'
 
-const ViewVideo = () => {
+const ViewVideo = (props) => {
   const [url, setUrl] = useState()
   const [selectedUrl, setSelectedUrl] = useState('')
   const [resultatTest, setResultatTest] = useState(false)
@@ -28,7 +28,7 @@ const ViewVideo = () => {
 
   return (
     <div className='viewvideo'>
-      <Header />
+      <Header firstname={props.firstname} />
       <div className={!resultatTest ? 'videoContainer' : 'hidden'}>
         <div>
           <p className='titresSections blabla titreVideo'>{selectedUrl.title}</p>

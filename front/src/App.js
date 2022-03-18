@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import Connexion from './screens/Connexion'
 import Game from './screens/Game'
-import Header from './components/Header'
 import { useState, useEffect } from 'react'
 
 import Home from './screens/Home'
@@ -43,12 +42,11 @@ const App = () => {
     <div className='App'>
       <Routes>
         <Route path='/connexion' element={<Connexion />} />
-        <Route path='/' element={<Home isManager={isManager} />} />
-        <Route path='/quizz' element={<Quizz />} />
-        <Route path='/preventions' element={<Prevention />} />
-        <Route path='/lastpage' element={<LastPage isManager={isManager} points={points} />} />
-        <Route path='/game' element={<Game />} />
-        <Route path='/header' element={<Header />} />
+        <Route path='/' element={<Home isManager={isManager} firstname={datas.firstname} />} />
+        <Route path='/quizz' element={<Quizz firstname={datas.firstname} />} />
+        <Route path='/preventions' element={<Prevention firstname={datas.firstname} />} />
+        <Route path='/lastpage' element={<LastPage isManager={isManager} points={points} firstname={datas.firstname} />} />
+        <Route path='/game' element={<Game firstname={datas.firstname} />} />
       </Routes>
     </div>
   ) : (

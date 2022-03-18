@@ -10,6 +10,10 @@
   font-family: 'Public';
 }
 
+.entetePrev {
+  width: 90vw;
+}
+
 .buttomreveal {
   position: relative;
   display: flex;
@@ -65,8 +69,9 @@
 }
 
 .folders {
-  margin-bottom: 12px;
+  padding: 5vw;
   width: 90vw;
+  background-color: var(--second);
 }
 
 .haut {
@@ -139,4 +144,3 @@
   font-size: 1.25em;
   font-family: 'Enedis';
 }
-

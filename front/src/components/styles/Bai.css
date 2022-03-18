@@ -43,10 +43,19 @@
   justify-content: space-between;
 }
 
-textarea{
-  border: none; 
+.buttonsBai {
+  display: flex;
+  justify-content: space-between;
 }
 
-#sendToSecu{
+.buttonBai {
+  width: 160px;
+}
+
+textarea {
+  border: none;
+}
+
+#sendToSecu {
   padding: 4px;
 }
