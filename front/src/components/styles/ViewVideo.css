@@ -1,0 +1,25 @@
+.viewvideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 84vh;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 40vh;
+  width: 90vw;
+  margin: auto;
+  background-color: var(--main);
+}
+
+.videoContainer iframe {
+  width: 88vw;
+}
+
+.titreVideo {
+  width: 88vw;
+}

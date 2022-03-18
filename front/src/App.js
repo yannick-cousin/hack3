@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import Connexion from './screens/Connexion'
 import Game from './screens/Game'
+import Header from './components/Header'
 import { useState, useEffect } from 'react'
 
 import Home from './screens/Home'
@@ -41,6 +42,8 @@ const App = () => {
     return <div>Loading</div>
   }
 
+  console.log(datas.firstname)
+
   return isAuthenticated ? (
     <div className='App'>
       <Routes>
@@ -50,6 +53,7 @@ const App = () => {
         <Route path='/preventions' element={<Prevention />} />
         <Route path='/lastpage' element={<LastPage isManager={isManager} points={points} />} />
         <Route path='/game' element={<Game />} />
+        <Route path='/header' element={<Header />} />
       </Routes>
     </div>
   ) : (
