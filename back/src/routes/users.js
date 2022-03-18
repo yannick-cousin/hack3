@@ -4,17 +4,9 @@ const User = require('../models/users')
 
 usersRouter.get('/',(req,res)=>{
     User.findMany()
-    const user=[]
-    .then(result => {
-        result.forEach(us=> user.push({
-            id: us.id,
-            firstname: us.firstname,
-            lastname: us.lastname,
-            points: us.points,
-            manager: us.manager,
-            admin: us.admin,
-            isTechnician_id: us.isTechnician_id
-        }))
+    
+    .then(user => {
+        
         res.status(200).json(user)
       })
       .catch(err => {
@@ -35,5 +27,27 @@ usersRouter.get('/:id', (req, res) => {
         res.status(500).send('Error retrieving users from database')
       })
   }) 
+
+  usersRouter.put('/:id', (req, res) => {
+    let existingUser = null
+    User.findOne(req.params.id)
+      .then(user => {
+        existingUser = user
+        if (!existingUser) return Promise.reject('RECORD_NOT_FOUND')
+        return User.update(req.params.id, req.body)
+      })
+      .then(() => {
+        res.status(200).json({ ...existingUser, ...req.body })
+      })
+      .catch(err => {
+        console.error(err)
+        if (err === 'RECORD_NOT_FOUND') {
+          res.status(422).json({ validationErrors: validationErrors.details })
+        } else {
+          res.status(500).send('Error updating this user')
+        }
+      })
+  })
+
 
 module.exports= usersRouter

@@ -18,6 +18,7 @@
 	flex-direction: column;
 }
 
+
 .defi {
 	display: flex;
 	flex-direction: column;
@@ -66,7 +67,7 @@
 
 .home {
 	display: flex; 
-	flex-direction: column; 
+	flex-direction: column;  
 }
 
 .launchGame {
@@ -88,6 +89,11 @@
 .logo img {
 	display: flex;
 	width: 40%;
+}
+
+.managerContainer {
+	background-color: var(--stat-back);
+	width: 100vw;
 }
 
 .fondamentaux {
@@ -121,3 +127,10 @@
 	font-family: 'enedis';
 	margin-bottom: 12px;
 } */
+
+.prevContainer {
+	margin: 5vw; 
+	padding: 5vw;
+	width: 90vw;
+	background-color: var(--second);
+}

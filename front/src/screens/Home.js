@@ -13,12 +13,17 @@ import reflechis from '../assets/reflechis.png';
 import fil from '../assets/ENEDIS_FIL_CONCEPTUEL_FOND_BLANC_RVB_EXE_02.png';
 import vatMaltCC from '../assets/vatMaltCC.png'; 
 import belek from '../assets/belek.png'; 
+import Footer from '../components/Footer';
+import ToPrevention from '../components/ToPrevention';
+import ManagerLastPage from '../components/ManagerLastPage';
 
-const Home = () => {
+
+const Home = (props) => {
 
 	return (
+		<div>
+		<Header />
 		<div className="home">
-			<Header />
 			<div className="entete">
 				<h1 className="titres">
 					La sécurité est une compétence professionnelle
@@ -28,7 +33,6 @@ const Home = () => {
 					proposons, chaque jour, un défi afin de vous rappeler quelques élements de sécurité de façon ludique.{' '}
 				</p>
 			</div>
-
 			<div className="astuces">
 				<img src={bulb} alt="astuce" />
 			</div>
@@ -41,7 +45,13 @@ const Home = () => {
 					C'est parti !
 				</Link>
 			</div>
-			<div className='fondamentaux'>
+			<div className={props.isManager === 1 ? 'prevContainer' : 'hidden'}>
+        		<ToPrevention />
+        	</div>
+			<div className={props.isManager === 1 ? 'managerContainer' : 'hidden'}>
+   				<ManagerLastPage  />
+			</div> 
+			<div className={props.isManager === 0 ? 'fondamentaux' : 'hidden'}>
 				<img src={attentif} alt="attentif" className="div1" style={{ width: '72%', marginLeft: '16px'}}/> 
 				<img src={reflechis} alt="reflechis" className="div2"style={{ width: '72%', marginLeft: '16px'}}/> 
 				<img src={noTel} alt="noTel" className="div3" style={{ width: '72%', marginLeft: '16px'}}/> 
@@ -51,15 +61,10 @@ const Home = () => {
 				<img src={vatMaltCC} alt="vatMaltCC" className="div7" style={{ width: '72%', marginLeft: '16px'}}/>
 				<img src={belek} alt="belek" className="div8" style={{ width: '72%', marginLeft: '16px'}}/>  
 			</div>
-			<div className="basdepage">
-				{/* <div className="fil">
-					<img src={fil} alt="deco" />
-				</div> */}
-				<div className="logo">
-					<img src={logoblanc} alt="ENEDIS" />
-				</div>
-				
+			<div className="footerBis">
+				<img src={logoblanc} alt='ENEDIS' style={{ width: '40%'}} />
 			</div>
+		</div>
 		</div>
 	);
 };

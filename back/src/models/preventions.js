@@ -7,7 +7,7 @@ const findMany = ()=>{
 }
 
 const findOne = id =>{
-    const sql = 'SELECT * FROM preventions  WHERE id=?'
+    const sql = 'SELECT * FROM prevention  WHERE id=?'
     return db.query(sql,[id]).then(([result])=>result[0])
 }
 
