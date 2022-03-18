@@ -1,4 +1,3 @@
-
 import Bai from '../components/Bai'
 import Header from '../components/Header'
 import ToPrevention from '../components/ToPrevention'
@@ -10,7 +9,6 @@ import './styles/LastPage.css'
 import Footer from '../components/Footer'
 
 const LastPage = (props) => {
-
   const [baiOpen, setBaiOpen] = useState(true)
 
   return (
@@ -33,9 +31,9 @@ const LastPage = (props) => {
         <div className={!baiOpen ? 'progressContainer' : 'hidden'}>
           <Progress />
         </div>
-        <div>
-          <Footer />
-        </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   )

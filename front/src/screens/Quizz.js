@@ -49,7 +49,7 @@ const Quizz = () => {
   }, [questions, nbQuestion])
 
   return (
-    <div>
+    <div className='pageQuizz'>
       <Header />
       {gameFinished ? (
         <ResultatTest score={score} />
