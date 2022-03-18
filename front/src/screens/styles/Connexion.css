@@ -1,22 +1,23 @@
 .connexion {
-	background-color: var(--main);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
+    background-color: var(--main);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
 }
 
 .bienvenue {
-	background-color: white;
-	border-radius: 5%;
-	width: 70vw;
-	height: 50vh;
+    background-color: white;
+    border-radius: 5%;
+    width: 60vw;
+    height: 40vh;
+    z-index: 2;
 }
 
 .boutonEntrer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 66px;
-	cursor: pointer;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0; 
 }

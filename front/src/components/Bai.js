@@ -41,7 +41,7 @@ const Bai = (props) => {
           ></textarea>
           <div>
             <input type='checkbox' id='sendToSecu' name='sendToSecu' value='sendToSecu'></input>
-            <label for='sendToSecu'>Envoyer au responsable de sécurité uniquement</label>
+            <label for='sendToSecu' style={{border :'none'}}>Envoyer au responsable de sécurité uniquement</label>
           </div>
           <button type='button' className='button1' onClick={() => sendRetour()}>
             C'est parti !

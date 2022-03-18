@@ -4,7 +4,7 @@ import ToPrevention from '../components/ToPrevention'
 import Result from '../components/Result'
 import Progress from '../components/Progress'
 import ManagerLastPage from '../components/ManagerLastPage'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './styles/LastPage.css'
 import Footer from '../components/Footer'
 

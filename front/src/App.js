@@ -18,11 +18,6 @@ const App = () => {
   const [points, setPoints] = useState([])
   const [id, setId] = useState(1)
   const [isManager, setIsManager] = useState([])
-  // const { isAuthenticated, isLoading } = useAuth0();
-  // if (isLoading) {
-  // 	return <div>Loading</div>;
-  // }
-
   const { isAuthenticated, isLoading } = useAuth0()
 
   useEffect(() => {
@@ -48,7 +43,7 @@ const App = () => {
     <div className='App'>
       <Routes>
         <Route path='/connexion' element={<Connexion />} />
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home isManager={isManager} />} />
         <Route path='/quizz' element={<Quizz />} />
         <Route path='/preventions' element={<Prevention />} />
         <Route path='/lastpage' element={<LastPage isManager={isManager} points={points} />} />

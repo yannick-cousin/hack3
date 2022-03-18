@@ -1,14 +1,15 @@
+import Logout from './Logout'
 import logo from '../assets/usersmiley.svg'
 import './styles/Header.css'
 
-const Header = (props) => {
-  console.log(props)
+const Header = () => {
   return (
     <div className='header'>
+      <Logout />
       <div className='user'>
-        <p>{props.firstname}</p>
+        <p>Utilisateur</p>
+        <img src={logo} alt='user' />
       </div>
-      <img src={logo} alt='user' />
     </div>
   )
 }
